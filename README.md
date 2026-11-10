@@ -16,4 +16,6 @@ Bạn có thể xem trực tiếp trang web đang chạy tại đây:
 [Bấm vào đây để xem trang web](https://nguyennhat-it.github.io/happy-birthday/)
 
 ---
-Phát triển bởi [nguyennhat-it](https://github.com) ❤️
+Phát triển bởi [nguyennhat-it](https://github.com) 
+![Giao diện trang web](screenshot.jpg)
+
