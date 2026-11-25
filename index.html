@@ -337,8 +337,8 @@
     <div class="card">
       <h1>Happy Birthday <span id="name">!</span></h1>
       <p id="msg">
-        Em gửi cô Hằng một chút dễ thương cho ngày đặc biệt này. Cô nhắm mắt ước
-        một điều thật đẹp rồi thổi nến nhé cô ơi! ✨
+        Gửi Đức một chút dễ thương cho ngày đặc biệt này. Nhắm mắt ước một điều
+        thật đẹp rồi thổi nến! ✨
       </p>
       <div class="btn-group">
         <button id="btn">Thổi nến 🎂</button>
@@ -347,13 +347,11 @@
     </div>
 
     <script>
-      //Đổi tên người nhận bằng link: birthday.html?ten=Lan
       const params = new URLSearchParams(location.search);
       if (params.get("ten")) {
         document.getElementById("name").textContent = params.get("ten");
       }
 
-      //Tạo bóng bay & đom đóm nền
       const bgDecor = document.getElementById("bgDecor");
       const balloonColors = [
         "#ff8fab",
@@ -389,7 +387,6 @@
         { r: 54, h: 40, color: "#ff8fab", top: "#fff0f3", drip: "#ffe5ec" },
       ];
 
-      // Đĩa bánh
       const plate = document.createElement("div");
       plate.className = "disc";
       Object.assign(plate.style, {
@@ -421,7 +418,6 @@
           cake.appendChild(s);
         }
 
-        // Mặt phẳng trên của mỗi tầng bánh
         const d = document.createElement("div");
         d.className = "disc";
         Object.assign(d.style, {
@@ -434,7 +430,6 @@
         });
         cake.appendChild(d);
 
-        // Gắn quả dâu tây quanh viền bánh
         const berriesCount = layerIdx === 2 ? 6 : 8;
         const berryRadius = L.r - 10;
         for (let b = 0; b < berriesCount; b++) {
@@ -455,7 +450,6 @@
       });
       document.getElementById("candleWrap").style.top = -y + "px";
 
-      //Hiệu ứng Pháo giấy
       const canvas = document.getElementById("confetti");
       const ctx = canvas.getContext("2d");
       let pieces = [],
@@ -514,7 +508,6 @@
         else running = false;
       }
 
-      // Giai điệu Happy Birthday
       function playHappyBirthday() {
         const AudioCtx = window.AudioContext || window.webkitAudioContext;
         if (!AudioCtx) return;
@@ -561,13 +554,12 @@
         }, 35);
       }
 
-      //Xử lý Thổi nến và thắp
       const scene = document.getElementById("scene");
       const btn = document.getElementById("btn");
       const msg = document.getElementById("msg");
       const original = msg.textContent.trim();
       const wishAfterBlow =
-        "Dù giờ đã lên đại học rồi nhưng em vẫn nhớ mãi ngày tháng cùng cô. Chúc cô tuổi mới lúc nào cũng trẻ đẹp, hạnh phúc và mọi ước nguyện đều thành sự thật nhé cô ơiii. 🎉💖";
+        "Chúc Đức 1 ngày thật hạnh phúc và mọi ước nguyện đều thành sự thật nhé. 🎉💖";
 
       function toggleCandle() {
         const blown = scene.classList.toggle("out");
